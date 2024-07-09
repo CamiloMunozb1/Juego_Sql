@@ -5,7 +5,9 @@ def registro_usuario():
         try:
             consulta_cursor = registro.cursor()
             registro_jugador = str(input("Ingresa tu alias o nombre de jugador: "))
+            puntaje_jugador = int(input("Ingresa tu puntaje en el juego: "))
             consulta_cursor.execute("INSERT INTO Registro (Jugador) VALUES (?)",(registro_jugador,))
+            consulta_cursor.execute("INSERT INTO Registro (Puntaje) VALUES (?)",(puntaje_jugador,))
             registro.commit()
             print("Datos añadidos correctamente.")
         except ValueError:
