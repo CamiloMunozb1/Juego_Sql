@@ -1,9 +1,8 @@
-import sqlite3
 
 from funcionalidades.datos_juego.juego import juego_aleatorio
 from funcionalidades.datos_juego.registro import registro_usuario
 from funcionalidades.datos_juego.Puntuaciones import jugador_puntuaciones
-
+from funcionalidades.datos_juego.Eliminar import  eliminar_jugador
 
 
 while True:
@@ -11,9 +10,8 @@ while True:
           1. Jugar.
           2. Registro.
           3. jugadores y puntuaciones.
-          4. posiciones.
-          5. Eliminar jugador.
-          6. Salir.
+          4. Eliminar jugador.
+          5. Salir.
           """)
     try:
         usuario = int(input("Ingresa una opcion: "))
@@ -23,7 +21,9 @@ while True:
             registro_usuario()
         elif usuario == 3:
             jugador_puntuaciones()
-        elif usuario == 5:
+        elif usuario == 4:
+            eliminar_jugador()
+        elif usuario == 6:
             print("Muchas gracias por jugar.")
             break
     except ValueError:
