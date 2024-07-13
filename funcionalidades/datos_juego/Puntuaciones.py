@@ -29,6 +29,7 @@ def jugador_puntuaciones():
         resultado = consulta_cursor.fetchall()
 
     # SE USA EL METODO "DataFrame" PARA VISUALIZAR LA TABLA
+    
     resultado_df = pd.DataFrame(resultado)
 
     # SE MUESTRA LA TABLA 
